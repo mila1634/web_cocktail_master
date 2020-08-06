@@ -1,0 +1,336 @@
+/*---global---*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #000015;
+    color: #fafafa;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+section {
+    padding: 5rem 0;
+}
+span {
+    color: #ffc414;
+}
+
+/*---header---*/
+header {
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.container {
+    width: 100%;
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.nav-brand {
+    width: 2rem;
+}
+.nav-brand h1 {
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+}
+.nav-brand a {
+    color: #fff;
+}
+.menu-icons i {
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+.open i {
+    color: #023868;
+}
+.close i {
+    color: #fff;
+}
+.nav-list {
+    width: 25rem;
+    height: 100vh;
+    background-color: rgb(0,0,0);
+    position: fixed;
+    top: 0;
+    right: -26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    transition: all 650ms ease-in-out;
+}
+.nav-list.active {
+    right: 0;
+}
+.close {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+.nav-item {
+    margin: 1.5rem 0;
+}
+.nav-item a {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #046BC8;
+}
+.nav-item a:hover {
+    color: #023868;
+}
+.open i:hover {
+    color: #046BC8;
+}
+.close i:hover {
+    color: #023868;
+}
+
+/*---hero---*/
+.hero {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    background: linear-gradient(135deg, rgb(0,0,21,.8) 0%, rgb(	0,0,47,.9) 100%), url("images/hero-bg.jpg") center no-repeat;
+    background-size: cover;
+}
+.hero-text {
+    width: 100%;
+    max-width: 50rem;
+    text-transform: uppercase;
+    margin-top: 20px; /*CHECK*/
+}
+.hero-text h1 {
+    font-size: 2.6rem;
+}
+.hero-text p {
+    text-transform: lowercase;
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+button {
+    background-color: #046BC8;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    color: #fafafa;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #023868;
+}
+
+/*---why us---*/
+.all-heading {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+}
+.all-heading h1 {
+    font-size: 3rem;
+    font-family: 'Orbitron', sans-serif;
+}
+.all-heading p {
+    text-transform: lowercase;
+    color: rgb(4,107,200,.4);
+}
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+}
+.why-grid-item {
+    color: #fafafa;
+    position: relative;
+    height: 25rem;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+.why-grid-item::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgb(0,0,21,.8) 0%, rgb(	0,0,47,.9) 100%);
+    background-size: cover;
+    z-index: -1;
+}
+.diploma {
+    background: url("images/diploma.jpg") center no-repeat;
+    background-size: cover;
+}
+.skills {
+    background: url("images/skills.jpg") center no-repeat;
+    background-size: cover;
+}
+.income {
+    background: url("images/income.jpg") center no-repeat;
+    background-size: cover;
+}
+.why-grid-item i {
+    font-size: 4rem;
+    color: #ffc414;
+}
+.why-grid-item h1 {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-family: 'Orbitron', sans-serif;
+    margin: 2rem 0;
+}
+
+/*---testimonials---*/
+.testimonials {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    background: linear-gradient(135deg, rgb(0,0,21,.8) 0%, rgb(	0,0,47,.9) 100%), url("images/testimonials-bg.jpg") center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.testimonials-item {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.testimonials-item-text {
+    position: relative;
+    padding: 0 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.testimonials-item-text i {
+    font-size: 3rem;
+    color: #ffc414;
+    opacity: .6;
+    position: absolute;
+    top: -6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+.testimonials-item-image img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 4px solid #ffc414;
+}
+
+/*---let's make cocktails----*/
+.lets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/*---footer---*/
+footer {
+    color: rgb(0,0,0,.7);
+    text-align: center;
+    padding: 2.5rem 0;
+    background: #023868;
+}
+
+/*media queries*/
+@media screen and (min-width: 350px) {
+    .hero .container {
+        transform: translateY(20%);
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .header {
+        height: 8rem;
+    }
+    .nav-brand {
+        width: 3.5rem;
+    }
+    .nav-list {
+        width: initial;
+        height: initial;
+        position: initial;
+        top: initial;
+        right: initial;
+        background-color: transparent;
+        flex-direction: row;
+        transition: initial;
+    }
+    .menu-icons {
+        display: none;
+    }
+    .nav-item {
+        margin: 0 2.5rem;
+    }
+    .nav-item a {
+        color: #046BC8;
+        position: relative;
+        font-size: 1.3rem;
+        padding-bottom: 5px;
+    }
+    .nav-item a:hover {
+        color: #023868;
+        transition: transform 650ms;
+    }
+    .hero {
+        height: 70vh;
+    }
+    .hero .container {
+        transform: translateY(10%);
+    }
+    .all-heading h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        height: 75vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
